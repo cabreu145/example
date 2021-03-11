@@ -1,0 +1,42 @@
+{% extends 'index/base.html' %}
+
+{% load static %}
+{% block wrapper %}
+
+<div class="wrapper image-wrapper bg-image inverse-text" data-image-src="{% static 'index/style/images/art/bg10.jpg'%}">
+  <div class="container inner pt-120 pb-120 text-center">
+    <h1 class="heading" style="color: white;">My Latest Works</h1>
+    <p class="lead larger text-center mb-0" style="color: white;">Minimalism meets photography</p>
+  </div>
+  <!-- /.container --> 
+</div>
+<!-- /.wrapper -->
+<div class="wrapper light-wrapper">
+  <div class="container inner">
+    <div class="collage-wrapper">
+      {% for post in posts %}
+  <div class="col mb-4">
+    <div class="card">
+      <div class="view overlay">
+        <img class="card-img-top" src="{{post.image.url}}" style="width:675px; height:auto;">
+        <a href="#!">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+      
+
+      <div class="card-body">
+        <h4 class="card-title">{{post.title}}</h4>
+        <a href="{% url 'detail' post.id %}" class="btn btn-primary btn-md">Galleria</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %} 
+      <!-- /.collage --> 
+    </div>
+    <!-- /.collage-wrapper --> 
+  </div>
+  <!-- /.container --> 
+</div>
+<!-- /.wrapper -->
+{% endblock %}

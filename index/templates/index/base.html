@@ -1,0 +1,516 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="esp">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="text" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="{% static 'index/style/images/camara.png'%}">
+<title>AlexAlvarexFoto</title>
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'index/style/css/bootstrap.min.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'index/style/css/plugins.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'index/style/revolution/css/settings.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'index/style/revolution/css/layers.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'index/style/revolution/css/navigation.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'index/style/revolution/revolution-addons/filmstrip/css/revolution.addon.filmstrip.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'index/style/revolution/revolution-addons/typewriter/css/typewriter.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'index/style/type/icons.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'index/style.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'index/style/css/color/ice.css'%}">
+<link href='https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+{% block navbar %}
+<div class="content-wrapper">
+  <nav class="navbar transparent absolute nav-wrapper-dark inverse-text navbar-expand-lg">
+    <div class="container">
+      <div class="navbar-header">
+        <div class="navbar-brand"><a href="{% url 'home' %}"><img src="{% url 'home' %}" srcset="{% static 'index/style/images/logo-light.png'%} 1x, {% static 'index/style/images/logo-light@2x.png'%} 2x" alt="" /></a></div>
+        <div class="navbar-hamburger ml-auto d-lg-none d-xl-none">
+          <button class="hamburger animate" data-toggle="collapse" data-target=".navbar-collapse"><span></span></button>
+        </div>
+      </div>
+      <!-- /.navbar-header -->
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" style="color: white;" href="{% url 'home' %}">Inicio</a>
+            <ul class="dropdown-menu mega-menu">
+              <li class="mega-menu-content">
+                <div class="row">
+                  <div class="col-lg-3">
+                    <ul class="list-unstyled">
+                      
+                    </ul>
+                  </div>
+                  <!--/column -->
+                  <div class="col-lg-3">
+                    <ul class="list-unstyled">
+                     
+                    </ul>
+                  </div>
+                  <!--/column -->
+                  <div class="col-lg-3">
+                    <ul class="list-unstyled">
+                      
+                    </ul>
+                  </div>
+                  <!--/column -->
+                  <div class="col-lg-3">
+                    <ul class="list-unstyled">
+                      
+                    </ul>
+                  </div>
+                  <!--/column --> 
+                </div>
+                <!--/.row --> 
+              </li>
+              <!--/.mega-menu-content-->
+            </ul>
+            <!--/.dropdown-menu --> 
+          </li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" style="color: white;" href="{% url 'bodas' %}">Bodas</a>
+            <ul class="dropdown-menu dropdown-menu-left">
+              <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#">Header</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#">Classic Header</a>
+	                <ul class="dropdown-menu">
+	                  
+	                </ul>
+	              </li>
+	              <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#">Centered Logo</a>
+	                <ul class="dropdown-menu">
+	                  
+	                </ul>
+	              </li>
+	              <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#">Overlay Menu</a>
+	                <ul class="dropdown-menu">
+	                  
+	                </ul>
+	              </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#">Slider</a>
+                <ul class="dropdown-menu">
+                  
+                </ul>
+              </li>
+              <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#">Footer</a>
+                <ul class="dropdown-menu">
+                  
+                </ul>
+              </li>
+              <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#">Fonts</a>
+                <ul class="dropdown-menu">
+                  
+                </ul>
+              </li>
+              <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#">Colors</a>
+                <ul class="dropdown-menu">
+                  
+                </ul>
+              </li>
+              <li class="nav-item"><a class="dropdown-item" href="box-layout.html">Box Layout</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" style="color: white;" href="#">Productos</a>
+            <ul class="dropdown-menu dropdown-menu-left">
+              <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#">Grid Portfolio</a>
+                <ul class="dropdown-menu">
+                  
+                </ul>
+              </li>
+              <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#">Masonry Portfolio</a>
+                <ul class="dropdown-menu">
+                  
+                </ul>
+              </li>
+              <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#">Justified Portfolio</a>
+                <ul class="dropdown-menu">
+                  
+                </ul>
+              </li>
+              <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#">Mosaic Portfolio</a>
+                <ul class="dropdown-menu">
+                  
+                </ul>
+              </li>
+              <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#">Modal Portfolio</a>
+                <ul class="dropdown-menu">
+                  
+                </ul>
+              </li>
+              <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#">Slide Portfolio</a>
+                <ul class="dropdown-menu">
+                  
+                </ul>
+              </li>
+              <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#">Carousel Portfolio</a>
+                <ul class="dropdown-menu">
+                  
+                </ul>
+              </li>
+              <li class="nav-item"><a class="dropdown-item" href="portfolio21.html">Videocase</a></li>
+              <li class="nav-item dropdown"><a class="dropdown-item dropdown-toggle" href="#">Portfolio Posts</a>
+                <ul class="dropdown-menu">
+                  
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" style="color: white;" href="#">Retratos</a>
+            <ul class="dropdown-menu dropdown-menu-left">
+              <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Newspaper Grid View</a>
+                <ul class="dropdown-menu">
+                  
+                </ul>
+              </li>
+              <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Grid View</a>
+                <ul class="dropdown-menu">
+                  
+                </ul>
+              </li>
+              <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Masonry Grid View</a>
+                <ul class="dropdown-menu">
+                  
+                </ul>
+              </li>
+              <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Image Grid View</a>
+                <ul class="dropdown-menu">
+                  
+                </ul>
+              </li>
+              <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">List View</a>
+                <ul class="dropdown-menu">
+                  
+                </ul>
+              </li>
+              <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Classic View</a>
+                <ul class="dropdown-menu">
+                  
+                </ul>
+              </li>
+              <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Blog Post</a>
+                <ul class="dropdown-menu">
+                  
+                </ul>
+              </li>
+            </ul>
+          </li>
+         
+          
+        </ul>
+        <!-- /.navbar-nav -->
+        <div class="navbar-divider"></div>
+        <ul class="social social-mute social-s">
+          
+        </ul>
+      </div>
+      <!-- /.navbar-collapse --> 
+    </div>
+    <!-- /.container --> 
+  </nav>
+  <!-- /.navbar -->
+  {% endblock %}
+  {% block wrapper %}
+  <div class="rev_slider_wrapper fullscreen-container">
+    <div id="slider" class="rev_slider fullscreenbanner bg-dark" data-version="5.4.8">
+      <ul>
+        <li data-transition="fade" data-thumb="{% static 'index/style/images/art/slider-bg31.jpg'%}"><img src="{% static 'index/style/images/art/slider-bg31.jpg'%}" alt="" /></li>
+        <li data-transition="fade" data-thumb="{% static 'index/style/images/art/slider-bg32.jpg'%}"><img src="{% static 'index/style/images/art/slider-bg32.jpg'%}" alt="" /></li>
+        <li data-transition="fade" data-thumb="{% static 'index/style/images/art/slider-bg33.jpg'%}"><img src="{% static 'index/style/images/art/slider-bg33.jpg'%}" alt="" /></li>
+      </ul>
+      
+      <div class="tp-bannertimer tp-bottom"></div>
+    </div>
+    <!-- /.rev_slider --> 
+  </div>
+  <!-- /.rev_slider_wrapper -->
+  <div class="wrapper dark-wrapper inverse-text">
+    <div class="container inner">
+      <h2 class="title-color color-default mb-20 text-center">Acerca de mi</h2>
+      <h2 class="section-title text-center">Soy Alejandro Álvarez, soy amante de la fotografía, me encanta capturar  momentos que vuelves a recordar con solo ver una imagen.</h2>
+      <div class="space40"></div>
+      <div class="row">
+        <div class="col-lg-7">
+          <h5>Un poco acerca de mi</h5>
+          <div class="space10"></div>
+          <div class="row">
+            <div class="col-md-5">
+              <figure><img src="{% static 'index/style/images/art/perfil.jpg'%}" alt=""></figure>
+            </div>
+            <div class="col-md-7">
+              <p><span class="dropcap color-default">J</span>oven emprendedor, siempre en busca de la mejora continua. Fotógrafo desde 2014.<br> He usado la fotografía como medio para expresar los sentimientos, no solo los míos, sino también de todas las perdonas. 
+
+Me especializo en reportaje social (bodas y XV años), fotografía de retrato y fotografía de producto. 
+
+Baso mi experiencia en técnicas de edición fotográfica, dándole la máxima atención a cada detalle en las tomas, así como en el uso de equipo de ultima generación. 
+</p>
+              
+            </div>
+            <!-- /column --> 
+          </div>
+          <!-- /.row --> 
+        </div>
+        <!--/column -->
+        <div class="space30 d-lg-none d-xl-none"></div>
+        <div class="col-lg-5">
+        <h2 class="section-title mb-40 text-center">Instagram</h2>
+          <div class="tiles tiles-s">
+            <div  class="items row">
+                <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-714433d1-0ba1-4928-ba46-e9f2599418cd"></div>
+            </div>
+          </div>
+          
+          <!-- /.progress-list --> 
+        </div>
+        <!--/column --> 
+      </div>
+      <!--/.row --> 
+    </div>
+    <!-- /.container --> 
+  </div>
+  <!-- /.wrapper -->
+  <div class="wrapper image-wrapper bg-image inverse-text" data-image-src="style/images/art/slider-bg31.jpg">
+    <div class="container inner pt-120 pb-120">
+      <div class="row counter" >
+        <div class="col-md-3 text-center">
+          <div class="icon fs-54 icon-color color-darks mb-15"> <i class="si-photo_camera color-darks" ></i> </div>
+          <h3 class="value color-darks">7518</h3>
+          <p class="text-uppercase color-darks mb-0" >fotografías</p>
+        </div>
+        <!--/column -->
+        <div class="col-md-3 text-center">
+          <div class="icon fs-54 icon-color color-darks mb-15"> <i class="si-cafe_hot-coffee color-darks"></i> </div>
+          <h3 class="value color-darks">3472</h3>
+          <p class="text-uppercase color-darks mb-0">Bodas</p>
+        </div>
+        <!--/column -->
+        <div class="col-md-3 text-center">
+          <div class="icon fs-54 icon-color color-darks mb-15"> <i class="si-electronics_tv color-darks" ></i> </div>
+          <h3 class="value color-darks">2184</h3>
+          <p class="text-uppercase color-darks mb-0">Productos</p>
+        </div>
+        <!--/column -->
+        <div class="col-md-3 text-center">
+          <div class="icon fs-54 icon-color color-darks mb-15"> <i class="si-sports_medal-2 color-darks"></i> </div>
+          <h3 class="value color-darks">4523</h3>
+          <p class="text-uppercase color-darks mb-0">Retratos</p>
+        </div>
+        <!--/column --> 
+      </div>
+      <!--/.row --> 
+    </div>
+    <!-- /.container --> 
+  </div>
+  <!-- /.wrapper -->
+<!-- /.wrapper -->
+<div class="wrapper dark-wrapper inverse-text">
+  <div class="container inner">
+    <h2 class="section-title text-center">My Portfolio</h2>
+    <p class="lead2 text-center">Great photography comes with understanding customer needs</p>
+    <div class="space30"></div>
+    <div class="swiper-container-wrapper image-grid swiper-col3-20" data-aos="fade">
+      <div class="swiper-container text-center">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <figure class="overlay overlay4"><a href="{% url 'bodas' %}"><img src="{% static 'index/style/images/art/boda.jpg'%}" alt="" /></a>
+              <figcaption class="d-flex">
+                <div class="align-self-end mx-auto">
+                  <h3 class="mb-0">Bodas</h3>
+                  
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+          <!--/.swiper-slide -->
+          <div class="swiper-slide">
+            <figure class="overlay overlay4"><a href="blog-post.html"><img src="{% static 'index/style/images/art/producto.jpg'%}" alt="" /></a>
+              <figcaption class="d-flex">
+                <div class="align-self-end mx-auto">
+                  <h3 class="mb-0">Productos</h3>
+                  
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+          <!--/.swiper-slide -->
+          <div class="swiper-slide">
+            <figure class="overlay overlay4"><a href="blog-post.html"><img src="{% static 'index/style/images/art/retrato.jpg'%}" alt="" /></a>
+              <figcaption class="d-flex">
+                <div class="align-self-end mx-auto">
+                  <h3 class="mb-0">Retratos</h3>
+                  
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+              </figcaption>
+            </figure>
+          </div>
+          <!--/.swiper-slide --> 
+        </div>
+        <!-- /.swiper-wrapper --> 
+      </div>
+      <!-- .swiper-container -->
+      <div class="swiper-pagination gap-large"></div>
+    </div>
+    <!-- .swiper-container-wrapper --> 
+  </div>
+  <!-- /.container --> 
+</div>
+<!-- /.wrapper -->
+  <div class="wrapper light-wrapper">
+    <div class="container inner">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <h2 class="section-title text-center">Contacto</h2>
+          <h3 class="text-center">¡ Mantengamos la comunicación !</h3>
+          <p class="text-center">No dudes en ponerte en contacto conmigo. Ya sea para cotizar las fotografías de tu boda soñada, <br>o para crear un nuevo proyecto. Mi equipo creativo y yo te aseguramos las mejores tomas. </p>
+          <ul class="icon-list list-inline text-center">
+            <li class="list-inline-item"><i class="fa fa-envelope"></i><a href="mailto:contacto@alexalvarezfoto.mx" class="nocolor">contacto@alexalvarezfoto.mx</a></li>
+            <li class="list-inline-item"><i class="fa fa-phone-square"></i>+52 (981) 126 1149</li>
+          </ul>
+        </div>
+        <!-- /column --> 
+      </div>
+      <!-- /.row -->
+      <div class="space30"></div>
+      <div class="form-container">
+        <form action="https://formspree.io/f/myybokqr" method="POST"    >
+          <div class="row text-center">
+            <div class="col-md-6 pr-10">
+              <div class="form-group">
+                <input type="text" class="form-control" name="Nombre" placeholder="Nombre." required="required">
+              </div>
+              <!--/.form-group --> 
+            </div>
+            <!--/column -->
+            <div class="col-md-6 pl-10">
+              <div class="form-group">
+                <input type="email" class="form-control" name="Correo Electrónico" placeholder="Correo Electrónico." required="required">
+              </div>
+              <!--/.form-group --> 
+            </div>
+            <!--/column -->
+            <div class="col-md-6 pr-10">
+              <div class="form-group">
+                <input type="tel" class="form-control" name="Número de Teléfono" placeholder="Número de Teléfono.">
+              </div>
+              <!--/.form-group --> 
+            </div>
+            <!--/column -->
+            <div class="col-md-6 pl-10">
+              <div class="form-group">
+                <input type="text" class="form-control" name="Asunto" placeholder="Asunto.">
+              </div>
+              <!--/.form-group --> 
+            </div>
+            <!--/column -->
+            <div class="col-12">
+              <textarea name="Mensaje" class="form-control" rows="3" placeholder="Escribe aqui tu mensaje..." required></textarea>
+              <div class="space20"></div>
+              <button type="submit" class="btn btn-full-rounded">Enviar</button>
+              <footer class="notification-box"></footer>
+            </div>
+            <!--/column --> 
+          </div>
+          <!--/.row -->
+        </form>
+        <!--/.vanilla-form --> 
+      </div>
+        
+      </div>
+      <!--/.row --> 
+    </div>
+    <!-- /.container --> 
+  </div>
+  {% endblock %}
+  {% block footer %}
+  <footer class="dark-wrapper inverse-text">
+    <div class="container inner pt-60 pb-60">
+      <div class="row">
+        <div class="col-md-12 col-lg-3 text-center text-lg-left">
+          <div class="widget"> <img src="#" srcset="{% static 'index/style/images/logo-light.png'%} 1x, {% static 'index/style/images/logo-light@2x.png'%} 2x" alt="" />
+            <div class="space20"></div>
+            <p style="color: white;">Soy Alejandro Álvarez, soy amante de la fotografía, me encanta capturar momentos geniales, momentos que vuelves a recordar con solo ver una imagen.</p>
+          </div>
+          <!-- /.widget --> 
+        </div>
+        <!-- /column -->
+        <div class="space30 d-lg-none d-xl-none"></div>
+        <div class="col-md-4 col-lg-2 offset-lg-3">
+          <div class="widget">
+            <h5 class="widget-title"style="color: white;">Principal</h5>
+            <ul class="list-unstyled">
+              <li><a href="{% url 'home' %}" class="nocolor" style="color: white;">Inicio</a></li>
+              <li><a href="{% url 'bodas' %}" class="nocolor" style="color: white;">Bodas</a></li>
+              <li><a href="#" class="nocolor" style="color: white;">Productos</a></li>
+              <li><a href="#" class="nocolor" style="color: white;">Retratos</a></li>
+            </ul>
+          </div>
+          <!-- /.widget --> 
+        </div>
+        <!-- /column -->
+        <div class="col-md-4 col-lg-2">
+          <div class="widget">
+            <h5 class="widget-title" style="color: white;">Social</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="nocolor" style="color: white;">Facebook</a></li>
+              <li><a href="#" class="nocolor" style="color: white;">Twitter</a></li>
+              <li><a href="#" class="nocolor" style="color: white;">Instagram</a></li>
+              <li><a href="#" class="nocolor" style="color: white;">Flickr</a></li>
+            </ul>
+          </div>
+          <!-- /.widget --> 
+        </div>
+        <!-- /column -->
+        <div class="col-md-4 col-lg-2">
+          <div class="widget">
+            <h5 class="widget-title" style="color: white;">Contact0</h5>
+            
+            <a href="mailto:first.last@email.com" class="nocolor" style="color: white;">contacto@alexalvarezfoto.mx</a><br/>
+            <a href="" style="color: white;">+52 (981) 126 1149</a>
+            </div >
+          <!-- /.widget --> 
+        </div>
+        <!-- /column --> 
+      </div>
+      <!-- /.row --> 
+    </div>
+    <!-- /.container -->
+    <div class="sub-footer dark-wrapper inverse-text">
+      <div class="container inner pt-30 pb-30 text-center" >
+        <p style="color: white;">© 2021 AlexAlvarexFoto. Todos los Derechos Reservados.</p>
+      </div>
+      <!-- /.container --> 
+    </div>
+    <!-- /.sub-footer --> 
+  </footer>
+</div>
+{% endblock %}
+
+<script src="{% static 'index/style/js/jquery.min.js'%}"></script> 
+<script src="{% static 'index/style/js/popper.min.js'%}"></script> 
+<script src="{% static 'index/style/js/bootstrap.min.js'%}"></script> 
+<script src="{% static 'index/style/revolution/js/jquery.themepunch.tools.min.js'%}"></script> 
+<script src="{% static 'index/style/revolution/js/jquery.themepunch.revolution.min.js'%}"></script> 
+<script src="{% static 'index/style/revolution/revolution-addons/filmstrip/js/revolution.addon.filmstrip.min.js'%}"></script> 
+<script src="{% static 'index/style/revolution/revolution-addons/typewriter/js/revolution.addon.typewriter.min.js'%}"></script> 
+<script src="{% static 'index/style/revolution/js/extensions/revolution.extension.actions.min.js'%}"></script> 
+<script src="{% static 'index/style/revolution/js/extensions/revolution.extension.carousel.min.js'%}"></script> 
+<script src="{% static 'index/style/revolution/js/extensions/revolution.extension.kenburn.min.js'%}"></script> 
+<script src="{% static 'index/style/revolution/js/extensions/revolution.extension.layeranimation.min.js'%}"></script> 
+<script src="{% static 'index/style/revolution/js/extensions/revolution.extension.migration.min.js'%}"></script> 
+<script src="{% static 'index/style/revolution/js/extensions/revolution.extension.navigation.min.js'%}"></script> 
+<script src="{% static 'index/style/revolution/js/extensions/revolution.extension.parallax.min.js'%}"></script> 
+<script src="{% static 'index/style/revolution/js/extensions/revolution.extension.slideanims.min.js'%}"></script> 
+<script src="{% static 'index/style/revolution/js/extensions/revolution.extension.video.min.js'%}"></script>
+<script src="{% static 'index/style/js/plugins.js'%}"></script> 
+<script src="{% static 'index/style/js/scripts.js'%}"></script>
+</body>
+</html>

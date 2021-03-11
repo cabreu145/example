@@ -1,0 +1,78 @@
+{% extends 'index/base.html' %}
+{% load static %}
+{% block wrapper %}
+  <!-- /.wrapper -->
+  <div class="wrapper dark-wrapper inverse-text" style="background: #272424">
+    <div class="container inner">
+      <div class="space60"></div>
+      <div class="row">
+        {% for v in video  %}
+        <div class="col-md-8">
+          <div data-aos="fade">
+            <video class="js-player" poster="{{v.poster_url|default_if_none:'#' }}" controls preload="auto">
+              <source src="{{v.mp4_url|default_if_none:'#' }}" type="video/mp4">
+              <source src="{{v.webm_url|default_if_none:'#' }}" type="video/webm">
+                <p>tu navegador no soporta este formato 
+                </p>
+            </video>
+          </div>
+        </div>
+        {% endfor %}
+        <!--/column -->
+        <div class="col-md-4 pl-md-5">
+          <h2 class="section-title"style="color: whitesmoke;">Boda</h2>
+          {% for i in titulo  %}
+          <div class="meta larger" style="color: whitesmoke;">{{i.title}}</div>
+          
+          <div class="space10"></div>
+          <p style="color: whitesmoke;">{{i.description}}</p>
+          {% endfor %}
+         </div>
+        <!--/column --> 
+      </div>
+      <!--/.row --> 
+    </div>
+    <!-- /.container --> 
+  </div>
+  <!-- /.wrapper -->
+<div class="wrapper light-wrapper">
+  <div class="container inner">
+    <div class="collage-wrapper">
+      <div id="collage-medium" class="collage effect-parent light-gallery">
+        {% for p in photo  %}
+        <div class="collage-image-wrapper">
+          <a href="{{p.file.url}}"><img src="{{p.file.url}}" style="width:50px; height:auto;" /></a>
+            <div id="caption1" class="d-none">
+              <p>{{p.title}}</p>
+              <p >{{p.description}}</p>
+            </div>
+          
+          
+        </div>
+        {% endfor %}
+        
+      </div>
+      
+      <!-- /.collage --> 
+    </div>
+    <!-- /.collage-wrapper -->
+    {% for l in url %}
+    <div class="card-body">
+        <a href="{{l.down}}" class="btn btn-primary btn-md">Descargar</a>
+        <input type="boton" class="btn btn-primary btn-md" value="Cargar más Fotos" onclick="javascript:window.location.reload();"/>
+      </div>
+      {% endfor %} 
+  </div>
+  <!-- /.container --> 
+</div>
+<!-- /.wrapper -->
+<script type="text/javascript">
+function reFresh()
+location.reload(true)
+
+/* Establece el tiempo 1 minuto = 60000 milliseconds. */
+window.setInterval("reFresh()",300000);
+// -->
+</script>
+
+{% endblock %}

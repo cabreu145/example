@@ -1,0 +1,92 @@
+{% extends 's.html' %}
+{% load i18n static %}
+
+{% block page-title %}{% trans 'Compress image test' %}{% endblock page-title %}
+{% block body-class%}compress-image{% endblock body-class %}
+
+
+{% block content %}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-6">
+            <img id="source-image-vertical" src="{% static 'images/big-ben-vertical.jpg' %}">
+        </div>
+        <div class="col-md-6">
+            <img id="target-image-vertical" src="{% static 'images/spinner.jpg' %}">
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-6">
+            <img id="source-image-horizontal" src="{% static 'images/big-ben-horizontal.jpg' %}">
+        </div>
+        <div class="col-md-6">
+            <img id="target-image-horizontal" src="{% static 'images/spinner.jpg' %}">
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}
+
+
+{% block extrastyle %}
+    {{ block.super }}
+
+    <style>
+        img {
+            border: 2px solid black;
+            width: 300px;
+        }
+    </style>
+
+{% endblock extrastyle %}
+
+
+{% block extrajs %}
+    {{ block.super }}
+    <script src="https://unpkg.com/blob-util/dist/blob-util.min.js"></script>
+    <script src="{% static 'upload_form/utils.js' %}"></script>
+    <script>
+
+        function display_image_size(element) {
+            var item = $(element);
+            var parent = item.parent();
+            var w = item.get(0).naturalWidth;
+            var h = item.get(0).naturalHeight;
+            var html = '<div class="imgsize">' + w + 'x' + h + '</div>';
+            parent.find('.imgsize').empty();
+            parent.append(html);
+        }
+
+        function do_resize_image(source_image, target_image) {
+            var max_size = 1920;
+            blobUtil.imgSrcToBlob(source_image.get(0).src).then(function(blob) {
+                UploadFormUtils.resize_image(blob, max_size).done(function(dataurl_or_blob) {
+                    if (dataurl_or_blob instanceof Blob) {
+                        UploadFormUtils.blobToDataURL(dataurl_or_blob, function(dataUrl) {
+                            target_image.attr('src', dataUrl);
+                        });
+                    }
+                    else {
+                        target_image.attr('src', dataurl_or_blob);
+                    }
+                })
+            });
+        }
+
+        $(document).ready(function($) {
+            $('img').on('load', function(event) {
+                display_image_size(event.target);
+            });
+            display_image_size($('#source-image-vertical'));
+            display_image_size($('#source-image-horizontal'));
+            do_resize_image($('#source-image-vertical'), $('#target-image-vertical'));
+            do_resize_image($('#source-image-horizontal'), $('#target-image-horizontal'));
+        });
+
+    </script>
+{% endblock extrajs %}
+
